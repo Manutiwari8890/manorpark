@@ -1,0 +1,849 @@
+@font-face {
+    font-family: 'marcellus';
+    src: url('../fonts/Marcellus-Regular.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+*
+{
+    --default-font: 'marcellus', sans-serif;
+    --green-color : #0a3f4c;
+    --text-color : #1A1A1A;
+}
+
+a.navbar-brand img,
+a.offcanvas-title img
+{
+    width:60%;
+}
+
+li a.nav-link
+{
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    font-family: 'inter', sans-serif;
+}
+
+li a.nav-link::before
+{
+    content: '';
+    width:0%;
+    height:1px;
+    background-color: white;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 0;
+    right:0%;
+    transition: all 0.4s linear;
+}
+
+li a.nav-link:hover::before
+{
+    width:100%;
+}
+
+li a.nav-link:hover
+{
+    color: white;
+}
+
+nav.navbar.active {
+    background-color: white;
+}
+
+nav.active li a.nav-link::before
+{
+    background-color: var(--green-color);
+}
+
+nav.active li a.nav-link
+{
+    color: var(--green-color);
+}
+
+button.navbar-toggler,
+button.close-icon
+{
+    border:none;
+    outline: none;
+    background-color: transparent;
+}
+
+button.navbar-toggler:focus,
+button.close-icon:focus
+{
+    box-shadow: none;
+}
+
+button.close-icon
+{
+    color: white;
+    font-size: 23px;
+}
+
+nav .mobile-wrapper
+{
+    display: none;
+}
+
+nav .mobile-wrapper hr
+{
+    height: 1px;
+    background-color: white;
+    margin: 40px 0px;
+    opacity: 1;
+}
+
+nav .mobile-wrapper a
+{
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+nav .mobile-wrapper .email a
+{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+nav .mobile-wrapper .add p
+{
+    color: white;
+    margin:25px 0px;
+}
+
+nav .mobile-wrapper .icons
+{
+    margin:25px 0px;
+}
+
+nav .mobile-wrapper .icons a i
+{
+    font-size: 24px;
+}
+
+nav .mobile-wrapper .icons a
+{
+    background-color: white;
+    color: var(--green-color);
+    display: inline-block;
+    width:42px;
+    height:42px;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+    margin-right: 12px;
+}
+
+
+
+#offcanvasNavbar
+ {
+    z-index: 9999;
+ }
+
+button.navbar-toggler .tool
+{
+    width:25px;
+    height:3px;
+    background-color: white;
+    margin:5px 0px;
+}
+
+nav.active button.navbar-toggler .tool
+{
+    background-color: var(--green-color);
+}
+
+
+
+section.banner
+{
+    min-height: 710px;
+    position: relative;
+}
+
+.banner .banner-overlay {
+    height: fit-content;
+    position: relative;
+}
+
+.banner .background-video {
+    width: 100%;
+    height: 710px;
+    object-fit: cover;
+    position: absolute;
+    top:0;
+}
+
+.banner .overlay {
+    width: 100%;
+    height: 710px;
+    background: #00000029;
+    position: absolute;
+    top: 0%;
+    z-index: 2;
+}
+
+.banner .content {
+    position: relative;
+    z-index: 5;
+    margin: 200px 0px 0px  0px;
+}
+
+.banner .content h1
+{
+    font-family: var(--default-font);
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 52px;
+    color: #FFFFFF;
+}
+
+.banner .btn-area
+{
+    padding: 20px 0px;
+}
+
+a.btn.btn-light
+{
+    color: white;
+    background-color: transparent;
+    border:1px solid white;
+    border-radius: 24px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 24px;
+}
+
+a.btn.btn-light:hover
+{
+    background-color: white;
+    color: #0a3f4c;
+}
+
+section.community
+{
+    background-color: #F1F3F2;
+    padding: 100px 0px;
+}
+
+.community .content 
+{
+    width: 70%;
+    text-align: center;
+}
+
+.community .content h1
+{
+    color: var(--green-color);
+    font-family: var(--default-font);
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+
+.community .content p
+{
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'inter', sans-serif;
+    line-height: 28px;
+}
+
+.community .content .img-container img
+{
+    margin-top: 25px;
+    width:25%;
+}
+
+section.expertise
+{
+    padding: 50px 0px;
+}
+
+.expertise .top-title
+{
+    width:60%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.expertise .top-title h1
+{
+    font-size: 44px;
+    color: var(--green-color);
+    font-weight: 500;
+    font-family: var(--default-font);
+}
+
+.expertise .top-title p
+{
+    font-family: 'inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--text-color);
+}
+
+.expertise .img-area img
+{
+    width:100%;
+    margin-left: -16%;
+}
+
+.expertise .gallery img
+{
+    width: 100%;
+    height: 100%;
+}
+
+section.partners-wrapper
+{
+    padding: 0px 0px 50px 0px;
+}
+
+.partners-wrapper .top-title h1
+{
+    text-align: center;
+    font-size: 44px;
+    color: var(--green-color);
+    font-weight: 500;
+    font-family: var(--default-font);
+    margin-bottom: 40px;
+}
+
+.partners-wrapper .partners
+{
+    width: 70%;
+    margin:0px auto;
+}
+.partners-wrapper .partners .partner .img-area img
+{
+    width:100%;
+    height: 450px;
+}
+
+.partners-wrapper .partners .partner .content h2
+{
+    font-size: 24px;
+    color: #333;
+    font-weight: 500;
+}
+
+.partners-wrapper .partners .partner .content p
+{
+    color: #666;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+section.investment
+{
+    background-color: #00303C;
+    padding: 50px 0px;
+}
+
+.investment .top-title h1
+{
+    font-size: 44px;
+    color: white;
+    font-weight: 500;
+    font-family: var(--default-font);
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.investment .card
+{
+    background-color: transparent;
+    border-radius: 0px;
+    border:0px;
+    color: white;
+    height: 100%;
+    border-left:3px solid #69A3B9;
+    padding:5px 0px 5px 15px;
+}
+
+.investment .card h2
+{
+    font-size: 22px;
+    font-family: 'inter', sans-serif;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.investment .card p
+{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'inter', sans-serif;
+}
+
+section#portfolio
+{
+    padding: 75px 0px 0px 0px;
+}
+
+#portfolio .top-title
+{
+    width:80%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#portfolio .top-title h1
+{
+    font-size: 38px;
+    color: var(--green-color);
+    font-weight: 500;
+    font-family: var(--default-font);
+}
+
+#portfolio a.post-card .img-container img
+{
+    width: 100%;
+    transition: all 0.4s linear;
+}
+
+#portfolio a.post-card
+{
+    text-decoration: none;
+    color: #1f1f1f;
+}
+
+#portfolio a.post-card .content
+{
+    margin:22px 0px;
+}
+
+#portfolio a.post-card .content h4
+{
+    font-size:18px;
+    font-weight: 600;
+    font-family: 'inter', sans-serif;
+    margin-bottom: 10px;
+}
+
+#portfolio a.post-card .content h3
+{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+
+#portfolio a.post-card .content p
+{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#portfolio a.post-card div.d-flex svg
+{
+    transition: all 0.4s linear;
+}
+
+#portfolio a.post-card:hover .img-container img
+{
+    transform: translateY(-15px);
+}
+
+#portfolio a.post-card:hover div.d-flex svg
+{
+    margin-right: 25px;
+}
+
+#portfolio a.post-card:hover svg
+{
+    margin-left: -20px;
+}
+
+section.contact
+{
+    padding:50px 0px;
+    margin:50px 0px;
+    position: relative;
+}
+
+section.contact::before
+{
+    content: '';
+    width:50%;
+    height: 100%;
+    background-color: #69A3B9;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 0;
+}
+
+section.contact::after
+{
+    content: '';
+    width:50%;
+    height: 100%;
+    background-color: #F1F3F2;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 0;
+}
+
+section.contact .col-md-6 
+{
+    z-index: 1;
+}
+
+.contact .desc
+{
+    height: 100%;
+    text-align: center;
+    align-content: center;
+    width: 75%;
+}
+
+.contact .desc h4
+{
+    color: white;
+    font-family: var(--default-font);
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+.contact .form 
+{
+    padding-left: 40px;
+}
+
+.contact input,
+.contact textarea
+{
+    margin:15px 0px;
+    background-color: white;
+    padding: 8px 12px;
+    border:2px solid #C5C5C5;
+    border-radius: 24px;
+    color: #00303C;
+    font-family: 'inter', sans-serif;
+}
+
+.contact input:focus,
+.contact textarea:focus
+{
+    box-shadow: none;
+    border-color: #C5C5C5;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder
+{
+    color: #00303cbb;
+}
+
+.contact .form .btn-area
+{
+    margin-top: 36px;
+}
+
+.contact button[type=submit],
+.contact input[type=submit]
+{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 15px;
+    font-family:'inter', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    margin: 0px auto;
+    transition: all 0.3s linear;
+}
+
+
+.contact button[type=submit]:hover,
+.contact input[type=submit]:hover
+{
+    transform: scale(1.1);
+}
+
+.footer .img-container img
+{
+    width: 35%;
+}
+
+.footer .single-box ul
+{
+    list-style: none;
+    padding: 0px;
+}
+
+.footer .single-box ul li
+{
+    margin:6px 0px;
+}
+
+.footer .single-box ul li a
+{
+    color:#1A1A1A;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'inter', sans-serif;
+    text-decoration: none;
+    padding: 12px 0px;
+}
+
+.footer .single-box .desc a
+{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.footer .single-box .desc .email,
+.footer .single-box .desc .number,
+.footer .single-box .desc .address
+{
+    margin:10px 0px;
+}
+
+.footer .single-box .desc .email a
+{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'inter', sans-serif;
+}
+
+.footer .single-box .desc .address p
+{
+    font-size: 18px;
+    font-weight: 300;
+    margin:10px 0px;
+}
+
+.footer .single-box .desc .icons
+{
+    margin:20px 0px;
+}
+
+.footer .single-box .desc .icons a.twitter
+{
+    background-color: var(--text-color);
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    text-align: center;
+    align-content: center;
+}
+
+.footer .single-box .desc .icons a
+{
+    transition: all 0.3s linear;
+    margin-right: 10px;
+}
+
+.footer .single-box .desc .icons a:hover
+{
+    transform: scale(1.1);
+}
+
+.footer hr
+{
+    height: 1px;
+    margin:40px 0px 10px 0px;
+    background-color:rgba(0, 0, 0, 0.735);
+}
+
+.footer .bottom p,
+.footer .bottom a
+{
+    color:#1A1A1A;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'inter', sans-serif;
+    text-decoration: none;
+}
+
+
+a#bottomToTop {
+    background-color: var(--green-color);
+    color: white;
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+    padding: 0px;
+    align-content: center;
+    text-align: center;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    z-index: 999;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (min-width:321px) and (max-width:767px)
+{
+    .offcanvas.offcanvas-start
+    {
+        background-color: var(--green-color);
+    }
+    nav .mobile-wrapper
+    {
+        display: block;
+    }
+    nav.active li a.nav-link
+    {
+        color: white;
+    }
+    ul.mobile-wrapper.submenu
+    {
+        padding: 0px;
+        margin: 15px 0px;
+    }
+    .submenu li a.nav-link
+    {
+        font-weight: 400;
+        text-transform: capitalize;
+        margin: 0px;
+        padding: 5px 0px;
+    }
+    section.banner
+    {
+        min-height: 500px;
+    }
+    .banner .overlay
+    {
+        height: 500px;
+    }
+    .banner .background-video
+    {
+        height: 500px;
+    }
+    .banner .content
+    {
+        margin: 150px 0px 0px 0px;
+    }
+    .banner .content h1
+    {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    section.community
+    {
+        padding: 50px 0px;
+    }
+    .community .content
+    {
+        width: 100%;
+    }
+    .community .content h1
+    {
+        font-size: 18px;
+    }
+    .community .content p
+    {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .expertise .top-title
+    {
+        width:100%;
+    }
+    .community .content .img-container img
+    {
+        width: 40%;
+    }
+    .expertise .img-area img
+    {
+        display: none;
+    }
+    .expertise .top-title h1
+    {
+        font-size: 24px;
+    }
+    .expertise .top-title p
+    {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .partners-wrapper .top-title h1
+    {
+        font-size: 32px;
+    }
+    .partners-wrapper .partners
+    {
+        width:100%;
+    }
+    .partners-wrapper .partners .partner
+    {
+        margin:20px 0px;
+    }
+    .investment .top-title h1
+    {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    .investment .card p
+    {
+        font-size: 12px;
+    }
+    .investment .card h2
+    {
+        font-size: 20px;
+    }
+    section#portfolio
+    {
+        padding: 30px 0px 0px 0px;
+    }
+    #portfolio .top-title
+    {
+        width:100%;
+        margin-bottom: 0px;
+    }
+    #portfolio .top-title h1
+    {
+        font-size: 21px;
+    }
+    .contact .desc
+    {
+        width: 100%;
+    }
+    .contact .desc h4
+    {
+        margin-bottom: 40px;
+    }
+    section.contact::before
+    {
+        width: 100%;
+        height: 38%;
+    }
+    section.contact::after
+    {
+        width: 100%;
+        height: 62%;
+        top: 38%;
+    }
+    .contact .form
+    {
+        padding: 40px 0px 0px 0px;
+    }
+    .footer .single-box {
+        padding: 15px 0px 0px 10px;
+    }
+}
